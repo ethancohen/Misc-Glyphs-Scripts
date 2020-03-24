@@ -12,9 +12,12 @@ l = Font.selectedLayers[0]
 g = l.parent
 selection = l.selection
 
+# glyphs that should be rotated around center of the x-height
+xGlyphs = ['b', 'd', 'f', 'h', 'j', 'k', 'l', 'p', 'q', 'y', 'alpha', 'iota', 'omega', 'eta', 'sigma', 'sigmafinal', 'sigma1', 'rho', 'tau', 'upsilon', 'nu', 'gamma', 'lambda', 'epsilon', 'pi']
+
 # rotate nodes around center
 def rotate(ymin, ymax, enforceSelection):
-	if g.name.split(".")[0] in "bdfhjklpqy":
+	if g.name.split(".")[0] in xGlyphs:
 		yCenter = l.master.xHeight / 2
 	else:
 		yCenter = ymax - ((ymax - ymin) / 2)
