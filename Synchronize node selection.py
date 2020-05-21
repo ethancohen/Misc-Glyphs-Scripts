@@ -4,6 +4,8 @@ __doc__="""
 Synchronize which nodes are selected in all of your masters/layers.
 """
 
+# Ethan Cohen. Updated 5/21/2020.
+
 import GlyphsApp
 
 currentLayer = Font.selectedLayers[0]
